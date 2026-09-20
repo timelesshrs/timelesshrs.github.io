@@ -19,7 +19,7 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-/* scrollbars, dark and thin everywhere */
+/* scroll stuff*/
 * { scrollbar-width: thin; scrollbar-color: #2f8f72 #0d100f; }
 ::-webkit-scrollbar { width: 8px; height: 8px; }
 ::-webkit-scrollbar-track { background: #0d100f; }
@@ -32,7 +32,7 @@ a { color: #58d8ae; transition: background .2s, color .2s, box-shadow .2s; }
 .red { color: #ff4d5e; text-shadow: 0 0 10px rgba(255, 77, 94, .6); }
 .dim { color: #7d9c90; }
 
-/* boot screen */
+/* booteroni */
 #boot {
   position: fixed; inset: 0; z-index: 10;
   background: #0a0c0b;
@@ -46,7 +46,7 @@ a { color: #58d8ae; transition: background .2s, color .2s, box-shadow .2s; }
 #bg { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
 .wrap { position: relative; z-index: 1; max-width: 1040px; margin: 0 auto; padding: 56px clamp(18px, 4vw, 48px) 80px; }
 
-/* prompt line */
+/* terminal prompt thing */
 .prompt { margin-bottom: 36px; }
 .prompt .user { color: #58d8ae; text-shadow: 0 0 10px rgba(88, 216, 174, .5); }
 .prompt .path { color: #6aa7ff; }
@@ -96,7 +96,7 @@ nav button:hover { background: #58d8ae; color: #0a0c0b; border-color: #58d8ae; b
 nav button.on { border-color: #58d8ae; color: #58d8ae; box-shadow: 0 0 12px rgba(88, 216, 174, .3); }
 nav button.on:hover { color: #0a0c0b; }
 
-/* output box */
+/* output */
 #out { display: none; border: 1px solid #2a3a33; background: rgba(13, 16, 15, .9); }
 #out.open { display: block; animation: fadeUp .4s ease both; box-shadow: 0 0 40px rgba(88, 216, 174, .08); }
 .out-bar {
@@ -121,7 +121,7 @@ nav button.on:hover { color: #0a0c0b; }
 #content h3:first-child { margin-top: 0; }
 #content p { margin-bottom: 18px; font-size: 16px; line-height: 1.9; }
 
-/* Capabilities page: group label small, the Capabilities themselves big */
+/* Capabilities (larp...?)*/
 #content .row { margin-bottom: 38px; }
 #content .row:last-child { margin-bottom: 0; }
 #content .row h3 { font-size: 14px; color: #7d9c90; text-shadow: none; margin: 0 0 14px; }
@@ -158,7 +158,7 @@ nav button.on:hover { color: #0a0c0b; }
   #content .row .tags a { margin-right: 20px; }
 }
 
-/* phone turned sideways, or any short window */
+/* phone turned sideways or any short window */
 @media (max-height: 520px) {
   .wrap { padding-top: 18px; }
   .prompt { margin-bottom: 14px; }
@@ -166,6 +166,8 @@ nav button.on:hover { color: #0a0c0b; }
   nav { margin-bottom: 18px; }
   #content { max-height: 75vh; max-height: 75dvh; }
 }
+
+/* YOOOOOOOOOOOOOOOOO */
 
 </style>
 </head>
@@ -223,13 +225,18 @@ var bootTimer = setInterval(function () {
   document.getElementById('pct').textContent = pct + '%';
 }, 90);
 
-// Capabilities, with the wikipedia page for each one
+// capaciblitirse and chips
 var Capabilities = {
   'offensive security': [['nmap','Nmap'], ['metasploit','Metasploit_Project'], ['burp suite','Burp_Suite'], ['sql injection','SQL_injection'], ['xss','Cross-site_scripting']],
+// ----------------------------------------
   'defensive security': [['log analysis','?Log analysis'], ['siem','Security_information_and_event_management'], ['incident response','Computer_security_incident_management'], ['zero trust','?Zero trust security model'], ['hardening','Hardening_(computing)']],
+// ----------------------------------------
   'networking': [['tcp/ip','Internet_protocol_suite'], ['dns','Domain_Name_System'], ['wireshark','Wireshark'], ['firewalls','Firewall_(computing)']],
+// ----------------------------------------
   'linux': [['arch linux','Arch_Linux'], ['hyprland','?Hyprland'], ['bash','Bash_(Unix_shell)'], ['quickshell','?Quickshell']],
+// ----------------------------------------
   'programming': [['python','Python_(programming_language)'], ['javascript','JavaScript'], ['node.js','Node.js'], ['astro','?Astro web framework'], ['HTML','HTML']],
+// ----------------------------------------
   'concepts': [['osint','Open-source_intelligence'], ['owasp top 10','OWASP'], ['threat modeling','Threat_model']]
 };
 
@@ -259,23 +266,29 @@ var pages = {
     cmd: 'cat about.txt',
     html:
       '<p>Also known online as <span class="green">timelesshrs</span>. Based in the United Arab Emirates, building a career in cyber.</p>' +
+
       '<div class="stats"><span class="label">uptime</span><span id="age"></span></div>' +
+
       '<p>I like breaking systems apart until I fully understand them, because that\'s the only way to find where they bleed.</p>' +
+
       '<p>I\'m now a Cybersecurity Engineering student at <span class="green">Abu Dhabi University</span>, and proud of it.</p>'
   },
   Capabilities: {
     cmd: 'ls Capabilities/',
-    html: ''   // filled in below
+    html: '' // down you go
   },
   projects: {
     cmd: 'ls projects/',
     html:
+    //skill 1
       '<h3>twilight desktop</h3>' +
       '<p>A full Arch + Hyprland desktop built from scratch. Custom panels for media, notifications, a Quran reader, prayer times and a pomodoro timer.</p>' +
       tags([['qml','QML'], ['quickshell','?Quickshell'], ['hyprland','?Hyprland'], ['bash','Bash_(Unix_shell)']]) +
+    //skill 2
       '<h3>islamic pwa</h3>' +
       '<p>Offline-first app with prayer times, a full Quran reader and a task board. Built out of personal need before I studied web dev.</p>' +
       tags([['javascript','JavaScript'], ['service workers','?Service worker']]) +
+    //skill 3
       '<h3>ctf + lab work</h3>' +
       '<p>Web exploitation, privilege escalation and network enumeration on <span class="green">TryHackMe</span> and <span class="green">HackTheBox</span>. Writeups as I go.</p>' +
       tags([['tryhackme','?TryHackMe'], ['hackthebox','?Hack The Box'], ['kali linux','Kali_Linux'], ['python','Python_(programming_language)']])
@@ -284,16 +297,22 @@ var pages = {
     cmd: 'cat certs.txt',
     html:
       '<p><span class="green">[done]</span> Cybersecurity Essentials <span class="dim">(Cisco NetAcad)</span></p>' +
+
       '<p><span style="color:#f0c95a">[doing]</span> CompTIA Security+</p>' +
+
       '<p><span style="color:#f0c95a">[doing]</span> Jr Penetration Tester <span class="dim">(<span class="green">TryHackMe</span>)</span></p>' +
+
       '<p><span class="dim">[later]</span> OSCP <span class="dim">(Offensive Security)</span></p>'
   },
   contact: {
     cmd: 'cat contact.txt',
     html:
       '<p>Open to chats about cybersecurity, Linux or working together. Email is best, I reply within a day. (mostly)</p>' +
+//email
       '<p><span class="label">email</span><a href="mailto:aamirizan.6@gmail.com">aamirizan.6@gmail.com</a></p>' +
+//fartstagrm
       '<p><span class="label">insta</span><a href="https://instagram.com/11.izn" target="_blank" rel="noopener">@11.izn</a></p>' +
+//disc
       '<p><span class="label">discord</span><span class="green">timelesshrs</span></p>'
   }
 };
@@ -310,7 +329,7 @@ function show(name) {
   document.getElementById('content').scrollTop = 0;
   var c = document.getElementById('content');
   c.classList.remove('swap');
-  void c.offsetWidth;   // restart the animation
+  void c.offsetWidth;
   c.classList.add('swap');
   document.getElementById('out').className = 'open';
   var btns = document.querySelectorAll('nav button');
@@ -335,7 +354,7 @@ for (var i = 0; i < btns.length; i++) {
 document.getElementById('x').onclick = hide;
 document.onkeydown = function (e) { if (e.key == 'Escape') hide(); };
 
-// live uptime (how long i've been alive). change BIRTH to your real birthday (month starts at 0, so jan = 0)
+// live uptime (how long i been alive)
 var BIRTH = new Date(2007, 0, 1, 0, 0, 0);
 
 function pad(n) { return n < 10 ? '0' + n : n; }
@@ -359,7 +378,7 @@ function tickAge() {
 }
 setInterval(tickAge, 1000);
 
-// background: dots that drift around and react to the cursor (or your finger)
+// background "inspired" from DEADSHOT HAHHAHAHAHHAHHAAHHA
 var canvas = document.getElementById('bg');
 var ctx = canvas.getContext('2d');
 var dots = [];
@@ -409,7 +428,7 @@ function drawBg() {
     if (a.y < 0) a.y = H;
     if (a.y > H) a.y = 0;
 
-    // dots near the cursor get pushed away a little
+    // dots hate the cursor :(
     var mx = a.x - mouse.x;
     var my = a.y - mouse.y;
     var md = Math.sqrt(mx * mx + my * my);
