@@ -102,7 +102,7 @@ var pages = {
   contact: {
     cmd: 'cat contact.txt',
     html:
-      '<p>Open to chats about cybersecurity, Linux or working together. Email is best, I reply within a day. (mostly)</p>' +
+      '<p>Open to chats and working together. Email is best, I reply within a day. (mostly)</p>' +
 //email
       '<p><span class="label">email</span><a href="mailto:aamirizan.6@gmail.com">aamirizan.6@gmail.com</a></p>' +
 //fartstagrm
