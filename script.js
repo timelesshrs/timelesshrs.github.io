@@ -56,7 +56,7 @@ var pages = {
 
       '<p>I like breaking systems apart until I fully understand them, because that\'s the only way to find where they bleed.</p>' +
 
-      '<p>I\'m now a Cybersecurity Engineering student at <span class="green">Abu Dhabi University</span>, and proud of it.</p>'
+      '<p>I\'m currently a Cybersecurity Engineering student at <span class="green">Abu Dhabi University</span>, and proud of it.</p>'
   },
   Capabilities: {
     cmd: 'ls Capabilities/',
