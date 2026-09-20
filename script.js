@@ -150,7 +150,7 @@ document.getElementById('x').onclick = hide;
 document.onkeydown = function (e) { if (e.key == 'Escape') hide(); };
 
 // live uptime (how long i been alive)
-var BIRTH = new Date(2007, 0, 1, 0, 0, 0);
+var BIRTH = new Date(2008, 0, 1, 0, 0, 0);
 
 function pad(n) { return n < 10 ? '0' + n : n; }
 
