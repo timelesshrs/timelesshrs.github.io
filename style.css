@@ -67,7 +67,7 @@ pre.banner {
   line-height: 1.05;
   margin-top: 6px;
   text-shadow: 0 0 8px rgba(255, 77, 94, .9), 0 0 24px rgba(255, 77, 94, .6), 0 0 60px rgba(255, 77, 94, .35);
-  animation: fadeUp .8s ease both .4s, pulse 3.5s ease-in-out 1.4s infinite;
+  /* animation: fadeUp .8s ease both .4s, pulse 3.5s ease-in-out 1.4s infinite; */
 }
 @keyframes pulse {
   50% { text-shadow: 0 0 6px rgba(255, 77, 94, .6), 0 0 16px rgba(255, 77, 94, .35), 0 0 36px rgba(255, 77, 94, .2); }
