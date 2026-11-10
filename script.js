@@ -88,17 +88,7 @@ var pages = {
       '<p>Web exploitation, privilege escalation and network enumeration on <span class="green">TryHackMe</span> and <span class="green">HackTheBox</span>. Writeups as I go.</p>' +
       tags([['tryhackme','?TryHackMe'], ['hackthebox','?Hack The Box'], ['kali linux','Kali_Linux'], ['python','Python_(programming_language)']])
   },
-  certs: {
-    cmd: 'cat certs.txt',
-    html:
-      '<p><span class="green">[done]</span> Cybersecurity Essentials <span class="dim">(Cisco NetAcad)</span></p>' +
 
-      '<p><span style="color:#f0c95a">[doing]</span> CompTIA Security+</p>' +
-
-      '<p><span style="color:#f0c95a">[doing]</span> Jr Penetration Tester <span class="dim">(<span class="green">TryHackMe</span>)</span></p>' +
-
-      '<p><span class="dim">[later]</span> OSCP <span class="dim">(Offensive Security)</span></p>'
-  },
   contact: {
     cmd: 'cat contact.txt',
     html:
@@ -111,6 +101,7 @@ var pages = {
       '<p><span class="label">discord</span><span class="green">timelesshrs</span></p>'
   }
 };
+
 pages.Capabilities.html = CapabilitiesHtml();
 
 var current = null;
