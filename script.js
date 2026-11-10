@@ -98,7 +98,7 @@ var pages = {
       '<p><span class="label">discord</span><span class="green">timelesshrs</span></p>'
   }
 };
-pages.capabilities.html = capabilitiesHtml();
+pages.capabilities.html = CapabilitiesHtml();
 
 var current = null;
 
