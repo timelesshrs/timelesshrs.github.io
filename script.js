@@ -54,7 +54,7 @@ var pages = {
 
       '<p>I like breaking systems apart until I fully understand them, because that\'s the only way to find where they bleed.</p>' +
 
-      '<p>I\'m currently a Cybersecurity Engineering student at <span class="green">Abu Dhabi University</span>, and proud of it.</p>'
+      '<p>I\'m now a Cybersecurity Engineering student at <span class="green">Abu Dhabi University</span>, and proud of it.</p>'
   },
   Capabilities: {
     cmd: 'ls Capabilities/',
@@ -86,11 +86,10 @@ var pages = {
       '<p>Web exploitation, privilege escalation and network enumeration on <span class="green">TryHackMe</span> and <span class="green">HackTheBox</span>. Writeups as I go.</p>' +
       tags([['tryhackme','?TryHackMe'], ['hackthebox','?Hack The Box'], ['kali linux','Kali_Linux'], ['python','Python_(programming_language)']])
   },
-
   contact: {
     cmd: 'cat contact.txt',
     html:
-      '<p>Open to chats and working together. Email is best, I reply within a day. (mostly)</p>' +
+      '<p>Open to chats about cybersecurity, Linux or working together. Email is best, I reply within a day. (mostly)</p>' +
 //email
       '<p><span class="label">email</span><a href="mailto:aamirizan.6@gmail.com">aamirizan.6@gmail.com</a></p>' +
 //fartstagrm
@@ -99,7 +98,6 @@ var pages = {
       '<p><span class="label">discord</span><span class="green">timelesshrs</span></p>'
   }
 };
-
 pages.Capabilities.html = CapabilitiesHtml();
 
 var current = null;
