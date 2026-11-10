@@ -11,7 +11,7 @@ var bootTimer = setInterval(function () {
 }, 90);
 
 // capaciblitirse and chips
-var Capabilities = {
+var capabilities = {
   'offensive security': [['nmap','Nmap'], ['metasploit','Metasploit_Project'], ['burp suite','Burp_Suite'], ['sql injection','SQL_injection'], ['xss','Cross-site_scripting']],
 // ----------------------------------------
   'defensive security': [['log analysis','?Log analysis'], ['siem','Security_information_and_event_management'], ['incident response','Computer_security_incident_management'], ['zero trust','?Zero trust security model'], ['hardening','Hardening_(computing)']],
@@ -36,10 +36,10 @@ function tags(list) {
   return h + '</div>';
 }
 
-function CapabilitiesHtml() {
+function capabilitiesHtml() {
   var h = '';
-  for (var group in Capabilities) {
-    h += '<div class="row"><h3>' + group + '</h3>' + tags(Capabilities[group]) + '</div>';
+  for (var group in capabilities) {
+    h += '<div class="row"><h3>' + group + '</h3>' + tags(capabilities[group]) + '</div>';
   }
   return h;
 }
@@ -57,7 +57,7 @@ var pages = {
       '<p>I\'m now a Cybersecurity Engineering student at <span class="green">Abu Dhabi University</span>, and proud of it.</p>'
   },
   Capabilities: {
-    cmd: 'ls Capabilities/',
+    cmd: 'ls capabilities/',
     html: '' // down you go
   },
   projects: {
@@ -98,7 +98,7 @@ var pages = {
       '<p><span class="label">discord</span><span class="green">timelesshrs</span></p>'
   }
 };
-pages.Capabilities.html = CapabilitiesHtml();
+pages.capabilities.html = capabilitiesHtml();
 
 var current = null;
 
