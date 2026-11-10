@@ -71,7 +71,7 @@ var pages = {
 
     // prjjc 2
       '<h3>twilight desktop</h3>' +
-      '<p>A full Arch + Hyprland desktop built from scratch. Custom panels for media, notifications, a Quran reader, prayer times and a pomodoro timer.</p>' +
+      '<p>A full Arch Hyprland desktop built from scratch. Custom panels, notifications, a Quran reader, prayer times and a pomodoro timer.</p>' +
       '<p class="took">⏱ time taken to create: 1 year (and still going)</p>' +
       tags([['qml','QML'], ['quickshell','?Quickshell'], ['hyprland','?Hyprland'], ['bash','Bash_(Unix_shell)']]) +
 
@@ -79,17 +79,17 @@ var pages = {
       '<h3>islamic pwa</h3>' +
       '<p>Offline-first app with prayer times, a full Quran reader and a task board.</p>' +
       '<p class="took">⏱ time taken to create: 5 months</p>' +
-      tags([['javascript','JavaScript'], ['service workers','?Service worker']]) +
+      tags([['javascript','JavaScript']]) +
 
     // prcjt 4
       '<h3>ctf + lab work</h3>' +
       '<p>Web exploitation, privilege escalation and network enumeration on <span class="green">TryHackMe</span> and <span class="green">HackTheBox</span>. Writeups as I go.</p>' +
-      tags([['tryhackme','?TryHackMe'], ['hackthebox','?Hack The Box'], ['kali linux','Kali_Linux'], ['python','Python_(programming_language)']])
+      tags([['tryhackme','?TryHackMe'], ['hackthebox','?Hack The Box']])
   },
   contact: {
     cmd: 'cat contact.txt',
     html:
-      '<p>Open to chats about cybersecurity, Linux or working together. Email is best, I reply within a day. (mostly)</p>' +
+      '<p>Open to chats. Email is best, I reply within a day. (mostly)</p>' +
 //email
       '<p><span class="label">email</span><a href="mailto:aamirizan.6@gmail.com">aamirizan.6@gmail.com</a></p>' +
 //fartstagrm
