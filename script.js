@@ -21,8 +21,6 @@ var Capabilities = {
   'linux': [['arch linux','Arch_Linux'], ['hyprland','?Hyprland'], ['bash','Bash_(Unix_shell)'], ['quickshell','?Quickshell']],
 // ----------------------------------------
   'programming': [['python','Python_(programming_language)'], ['javascript','JavaScript'], ['node.js','Node.js'], ['astro','?Astro web framework'], ['HTML','HTML']],
-// ----------------------------------------
-  'concepts': [['osint','Open-source_intelligence'], ['owasp top 10','OWASP'], ['threat modeling','Threat_model']]
 };
 
 function wikiUrl(t) {
